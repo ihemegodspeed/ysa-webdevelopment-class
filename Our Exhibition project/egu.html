@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor</title>
+    <link rel="stylesheet" href="egu.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- PROFILE CARD -->
+        <div class="card">
+            <img src="image/egu.jpg" alt="Bro Egu Jared">
+
+            <h2 id="name"></h2>
+            <p id="role"></p>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content">
+            <p id="text"></p>
+        </div>
+
+    </div>
+
+    <!-- BACK BUTTON -->
+    <a href="team-b.html" class="back">← Back</a>
+
+    <!-- TYPING SCRIPT -->
+    <script>
+        const nameEl = document.getElementById('name');
+        const roleEl = document.getElementById('role');
+        const textEl = document.getElementById('text');
+
+        const nameText = "Bro Egu Jared";
+        const roleText = "Class Instructor";
+
+        const contentText = "Bro Egu Jared is an experienced instructor who specializes in teaching front-end web development. He guides students in building modern, responsive, and interactive websites using core technologies such as HTML, CSS, and JavaScript.\n\nHe simplifies complex programming concepts, making them easy to understand for learners at different levels. Through hands-on projects and real-world examples, he helps students develop strong practical skills in web design and development.\n\nIn addition to teaching coding, he mentors students in problem-solving, logical thinking, and best practices in software development. His approach encourages creativity, consistency, and continuous learning.\n\nHe also introduces students to modern development tools and industry standards, preparing them to build professional and high-quality web applications.";
+
+        let i = 0, j = 0, k = 0;
+
+        function typeName(){
+            if(i < nameText.length){
+                nameEl.textContent += nameText.charAt(i);
+                i++;
+                setTimeout(typeName, 30);
+            } else {
+                typeRole();
+            }
+        }
+
+        function typeRole(){
+            if(j < roleText.length){
+                roleEl.textContent += roleText.charAt(j);
+                j++;
+                setTimeout(typeRole, 30);
+            } else {
+                typeContent();
+            }
+        }
+
+        function typeContent(){
+            if(k < contentText.length){
+                textEl.textContent += contentText.charAt(k);
+                k++;
+                setTimeout(typeContent, 1);
+            }
+        }
+
+        typeName();
+    </script>
+
+</body>
+</html>

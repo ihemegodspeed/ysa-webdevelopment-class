@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+/* LAYOUT */
+.container{
+    max-width: 850px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* CARD */
+.card{
+    text-align: center;
+    background: #fff;
+    color: #222;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* IMAGE */
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* NAME */
+#name{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+/* ROLE */
+#role{
+    font-size: 14px;
+    color: #555;
+}
+
+/* CONTENT */
+.content{
+    margin-top: 25px;
+    line-height: 1.7;
+    font-size: 15px;
+    color: #ddd;
+}
+
+.content p{
+    white-space: pre-line;
+}
+
+/* BACK BUTTON */
+.back{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-decoration: none;
+     background: #203a43;
+    color: #fff;
+    border: 1px solid #203a43;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.back:hover{
+    background: #fff;
+    color: #000;
+}

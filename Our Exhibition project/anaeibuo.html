@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidera Anaeibuo Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="image/chidera.png" alt="Chidera Anaeibuo">
+
+            <!-- JS WILL TYPE HERE -->
+            <h2 id="name"></h2>
+            <p id="role"></p>
+        </div>
+
+        <div class="content">
+            <p id="text"></p>
+        </div>
+
+    </div>
+
+    <a href="team-b.html" class="back">← Back</a>
+
+    <script>
+      const nameEl = document.getElementById('name');
+      const roleEl = document.getElementById('role');
+      const textEl = document.getElementById('text');
+
+      const nameText = "Chidera Anaeibuo";
+      const roleText = "Front-End Developer";
+      const contentText = "Chidera is a dedicated and detail-oriented front-end developer with a strong passion for building clean, responsive, and user-friendly web interfaces. He specializes in transforming design concepts into functional and visually appealing digital experiences.\n\nHe has solid knowledge of HTML, CSS, and JavaScript, which he uses to structure content, apply modern styling, and create interactive features that enhance user engagement. His focus is not only on how a website looks, but also on how it performs and responds across different devices.\n\nChidera is committed to writing clean and maintainable code while following best practices in web development. He continuously improves his skills by learning new technologies and staying updated with modern design trends.\n\nHe works effectively both independently and as part of a team, collaborating with designers and backend developers to deliver complete, high-quality web solutions.";
+;
+
+      let i = 0, j = 0, k = 0;
+
+      // Add cursor class dynamically
+      function setCursor(el){
+          document.querySelectorAll('.cursor').forEach(e => e.classList.remove('cursor'));
+          el.classList.add('cursor');
+      }
+
+      function typeName(){
+          setCursor(nameEl);
+          if(i < nameText.length){
+              nameEl.textContent += nameText.charAt(i);
+              i++;
+              setTimeout(typeName, 30);
+          } else {
+              typeRole();
+          }
+      }
+
+      function typeRole(){
+          setCursor(roleEl);
+          if(j < roleText.length){
+              roleEl.textContent += roleText.charAt(j);
+              j++;
+              setTimeout(typeRole, 30);
+          } else {
+              typeContent();
+          }
+      }
+
+      function typeContent(){
+          setCursor(textEl);
+          if(k < contentText.length){
+              textEl.textContent += contentText.charAt(k);
+              k++;
+              setTimeout(typeContent, 1);
+          }
+      }
+
+      typeName();
+    </script>
+ </body>
+</html>
